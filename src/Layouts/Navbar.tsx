@@ -62,6 +62,7 @@ function Navbar({ children }: props) {
 
     return (
         <>
+            {component}
             <div className="bg-[#242431] h-[80px] fixed bottom-0 w-full rounded-t-3xl min-w-85">
                 <div className="flex flex-col h-full justify-center">
                     <div className="w-full flex justify-between p-3">
