@@ -13,9 +13,10 @@ function Home({ isMobile }: props) {
             <div>
                 <div className="grid grid-cols-2 h-170">
                     <div className="flex items-center p-4">
-                        <div className="px-20">
+                        <div className="px-20 min-w-200">
                             <span>
-                                Olá meu nome é João e sou <Label>Desenvolvedor de sistemas</Label>
+                                Olá meu nome é João e sou 
+                                <span className="px-2"><Label>Desenvolvedor de sistemas fullstack</Label></span>
                                 <br />
                                 <br />
                                 Especialista em criar aplicações robustas que unem
@@ -29,7 +30,7 @@ function Home({ isMobile }: props) {
                         </div>
                     </div>
                     <div className="flex justify-center p-4">
-                        <img src={profile} />
+                        <img src={profile} className="w-150 min-w-150" />
                     </div>
                 </div>
             </div>
@@ -41,7 +42,9 @@ function Home({ isMobile }: props) {
             <div>
                 <div className="text-center items-center flex flex-col space-y-0.5">
                     <span className="w-full">Olá meu nome é João e sou</span>
-                    <Label>Desenvolvedor de sistemas Fullstack</Label>
+                    <div className="m-1">
+                        <Label>Desenvolvedor de sistemas Fullstack</Label>
+                    </div>
                     <div className='w-70 my-8'>
                         <img src={profile} />
                     </div>

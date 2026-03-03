@@ -6,6 +6,6 @@ interface props {
 
 export default function ({ children }: props) {
     return (
-        <label className="m-1 w-max font-extralight border py-1 px-8 rounded border-[#242431] bg-[#242431]">{children}</label>
+        <label className="w-max font-extralight border py-1 px-8 rounded border-[#242431] bg-[#242431]">{children}</label>
     )
 }
