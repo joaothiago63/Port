@@ -10,12 +10,12 @@ function Home({ isMobile }: props) {
 
     if (!isMobile) {
         return (
-            <div>
+            <section id="home" className="h-screen pt-15">
                 <div className="grid grid-cols-2 h-170">
                     <div className="flex items-center p-4">
                         <div className="px-20 min-w-200">
                             <span>
-                                Olá meu nome é João e sou 
+                                Olá meu nome é João e sou
                                 <span className="px-2"><Label>Desenvolvedor de sistemas fullstack</Label></span>
                                 <br />
                                 <br />
@@ -33,7 +33,7 @@ function Home({ isMobile }: props) {
                         <img src={profile} className="w-150 min-w-150" />
                     </div>
                 </div>
-            </div>
+            </section>
         )
     }
 

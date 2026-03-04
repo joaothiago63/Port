@@ -38,7 +38,7 @@ function Navbar({ children }: props) {
     if (!isMobile) {
         return (
             <>
-                <div className="mb-2">
+                <nav className="mb-2 fixed top-0 right-0 left-0">
                     <div className="h-14 py-4 flex w-full justify-between">
                         <div className="px-6">
                             <span className="font-bold">João</span>
@@ -46,16 +46,18 @@ function Navbar({ children }: props) {
                         </div>
                         <div className="flex justify-end">
                             <div className="flex gap-4 mx-40">
-                                <a href="#" className="font-bold">Home</a>
-                                <a href="#" className="font-bold">About me</a>
+                                <a href="#home" className="font-bold">Home</a>
+                                <a href="#about" className="font-bold">About me</a>
                                 <a href="#" className="font-bold">Contact</a>
                                 <a href="#" className="font-bold">Skills</a>
                             </div>
                         </div>
                     </div>
                     <hr className="border-t border-gray-800 opacity-50" />
+                </nav>
+                <div className="p-20">
+                    {component}
                 </div>
-                {component}
             </>
         )
     }

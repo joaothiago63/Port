@@ -6,7 +6,7 @@ interface props {
 function AboutMe({ isMobile }: props) {
     if (!isMobile)
         return (
-            <div className="space-y-20 p-20 flex flex-col">
+            <section id="about" className="space-y-20 px-20 pb-20 pt-60 flex flex-col h-screen">
                 <label className="text-5xl font-bold">Sobre mim</label>
                 <span className="w-300">Desenvolvo sistemas web completos para empresas que precisam de tecnologia confiável
                     e bem estruturada.
@@ -17,11 +17,11 @@ function AboutMe({ isMobile }: props) {
                     Meu compromisso é entregar projetos com qualidade técnica, clareza na comunicação
                     e foco em resultado.
                     Vamos transformar sua ideia em uma solução profissional.</span>
-            </div>
+            </section>
         )
 
     return (
-        <div className="space-y-20 p-10 flex flex-col">
+        <div className="space-y-20 p-10 flex flex-col h-screen">
             <label className="text-5xl font-bold">Sobre mim</label>
             <span>Desenvolvo sistemas web completos para empresas que precisam de tecnologia confiável
                 e bem estruturada.
