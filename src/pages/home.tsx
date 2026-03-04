@@ -38,7 +38,7 @@ function Home({ isMobile }: props) {
     }
 
     return (
-        <div className="p-10">
+        <section id="home" className="p-10">
             <div>
                 <div className="text-center items-center flex flex-col space-y-0.5">
                     <span className="w-full">Olá meu nome é João e sou</span>
@@ -59,7 +59,7 @@ function Home({ isMobile }: props) {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

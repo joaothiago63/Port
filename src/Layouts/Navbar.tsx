@@ -71,12 +71,17 @@ function Navbar({ children }: props) {
                         <IconWithLabel label="Contact">
                             <RenderIcon iconName="MessageCircle" />
                         </IconWithLabel>
-                        <IconWithLabel label="About me">
-                            <RenderIcon iconName="Users" />
-                        </IconWithLabel>
-                        <IconWithLabel label="Home">
-                            <RenderIcon iconName="Home" />
-                        </IconWithLabel>
+                        <a href="#about">
+                            <IconWithLabel label="About me">
+                                <RenderIcon iconName="Users" />
+                            </IconWithLabel>
+                        </a>
+
+                        <a href="#home">
+                            <IconWithLabel label="Home">
+                                <RenderIcon iconName="Home" />
+                            </IconWithLabel>
+                        </a>
                         <IconWithLabel label="Skills">
                             <RenderIcon iconName="Sparkles" />
                         </IconWithLabel>
