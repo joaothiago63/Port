@@ -25,7 +25,7 @@ function Home({ isMobile }: props) {
                                 para crescer junto com a empresa.
                             </span>
                             <div className="mt-15">
-                                <Button>Download CV</Button>
+                                <Button>Conectar</Button>
                             </div>
                         </div>
                     </div>
@@ -43,7 +43,7 @@ function Home({ isMobile }: props) {
                 <div className="text-center items-center flex flex-col space-y-0.5">
                     <span className="w-full">Olá meu nome é João e sou</span>
                     <div className="m-1">
-                        <Label>Desenvolvedor de sistemas Fullstack</Label>
+                        <Label>Desenvolvedor de sistemas</Label>
                     </div>
                     <div className='w-70 my-8'>
                         <img src={profile} />
@@ -55,7 +55,7 @@ function Home({ isMobile }: props) {
                         para crescer junto com a empresa.
                     </span>
                     <div className="mt-15">
-                        <Button>Download CV</Button>
+                        <Button>Conectar</Button>
                     </div>
                 </div>
             </div>

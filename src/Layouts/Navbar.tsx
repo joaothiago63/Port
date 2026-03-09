@@ -48,7 +48,7 @@ function Navbar({ children }: props) {
                             <div className="flex gap-4 mx-40">
                                 <a href="#home" className="font-bold">Home</a>
                                 <a href="#about" className="font-bold">About me</a>
-                                <a href="#" className="font-bold">Contact</a>
+                                <a href="#contact" className="font-bold">Contact</a>
                                 <a href="#" className="font-bold">Skills</a>
                             </div>
                         </div>
