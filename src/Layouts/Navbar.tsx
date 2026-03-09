@@ -68,9 +68,11 @@ function Navbar({ children }: props) {
             <div className="bg-[#242431] h-[80px] fixed bottom-0 w-full rounded-t-3xl min-w-85">
                 <div className="flex flex-col h-full justify-center">
                     <div className="w-full flex justify-between p-3">
-                        <IconWithLabel label="Contact">
-                            <RenderIcon iconName="MessageCircle" />
-                        </IconWithLabel>
+                        <a href="#contact">
+                            <IconWithLabel label="Contact">
+                                <RenderIcon iconName="MessageCircle" />
+                            </IconWithLabel>
+                        </a>
                         <a href="#about">
                             <IconWithLabel label="About me">
                                 <RenderIcon iconName="Users" />

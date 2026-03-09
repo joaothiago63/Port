@@ -7,7 +7,7 @@ interface props {
 
 function ContactForm() {
     return (
-        <div className="space-y-4 font-light">
+        <div className="space-y-5 font-light">
             <Input label="Nome" />
             <Input label="Email" />
             <Input label="Subject" />

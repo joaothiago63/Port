@@ -6,7 +6,7 @@ interface props extends ComponentPropsWithoutRef<'input'> {
 
 function TextArea({ label }: props) {
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col text-start">
             {label && (
                 <label>{label}</label>
             )}
