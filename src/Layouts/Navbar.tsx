@@ -1,5 +1,7 @@
 import React, { useEffect, useState, useMemo } from "react"
 import RenderIcon from "../libs/renderIcon"
+import { useParams } from "react-router-dom"
+import * as Lucide from 'lucide-react';
 
 interface props {
     children: React.ReactElement
@@ -7,12 +9,32 @@ interface props {
 
 interface IconWithLabelProps {
     children: React.ReactNode,
-    label: string
+    label: string,
+    selected: boolean
 }
+
+interface navbarIconsProps {
+    href: string,
+    label: string,
+    iconName: keyof typeof Lucide;
+}
+
+
+const navbarIcons: navbarIconsProps[] = [
+    { href: "contact", iconName: "MessageCircle", label: "Contact" },
+    { href: "about", iconName: "Users", label: "About me" },
+    { href: "home", iconName: "Home", label: "Home" },
+    { href: "Skills", iconName: "Sparkles", label: "Skills" }
+];
+
 
 const widthMobile: number = 780
 
 function Navbar({ children }: props) {
+
+    const params = useParams();
+
+    const uri = params['*'];
 
     const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < widthMobile)
 
@@ -68,25 +90,13 @@ function Navbar({ children }: props) {
             <div className="bg-[#242431] h-[80px] fixed bottom-0 w-full rounded-t-3xl min-w-85">
                 <div className="flex flex-col h-full justify-center">
                     <div className="w-full flex justify-between p-3">
-                        <a href="#contact">
-                            <IconWithLabel label="Contact">
-                                <RenderIcon iconName="MessageCircle" />
-                            </IconWithLabel>
-                        </a>
-                        <a href="#about">
-                            <IconWithLabel label="About me">
-                                <RenderIcon iconName="Users" />
-                            </IconWithLabel>
-                        </a>
-
-                        <a href="#home">
-                            <IconWithLabel label="Home">
-                                <RenderIcon iconName="Home" />
-                            </IconWithLabel>
-                        </a>
-                        <IconWithLabel label="Skills">
-                            <RenderIcon iconName="Sparkles" />
-                        </IconWithLabel>
+                        {navbarIcons.map((item, i) => (
+                            <a key={i} href={`#${item.href}`}>
+                                <IconWithLabel label={item.label} selected={uri === item.href}>
+                                    <RenderIcon iconName={item.iconName} className={`${uri === item.href ? "text-white" : ""}`} />
+                                </IconWithLabel>
+                            </a>
+                        ))}                        
                     </div>
                 </div>
             </div>
@@ -94,14 +104,19 @@ function Navbar({ children }: props) {
     )
 }
 
-function IconWithLabel({ children, label }: IconWithLabelProps) {
+function IconWithLabel({ children, label, selected }: IconWithLabelProps) {
+
+    const selectedClassName: string = "bg-[#7B69E5] rounded-lg"
+
     return (
-        <div className="flex flex-col gap-1 items-center cursor-pointer text-[#757575] hover:text-white">
-            <div className="flex justify-center">
-                {children}
+        <>
+            <div className={`flex flex-col gap-1 items-center cursor-pointer text-[#757575] hover:text-white p-2 ${selected ? selectedClassName : ""}`}>
+                <div className="flex justify-center">
+                    {children}
+                </div>
+                <label className={`${selected ? "font-bold text-white" : "font-normal"}`}>{label}</label>
             </div>
-            <label className="font-normal">{label}</label>
-        </div>
+        </>
     )
 }
 
