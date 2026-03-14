@@ -24,7 +24,6 @@ const navbarIcons: navbarIconsProps[] = [
     { href: "contact", iconName: "MessageCircle", label: "Contact" },
     { href: "about", iconName: "Users", label: "About me" },
     { href: "home", iconName: "Home", label: "Home" },
-    { href: "Skills", iconName: "Sparkles", label: "Skills" }
 ];
 
 
@@ -110,7 +109,7 @@ function IconWithLabel({ children, label, selected }: IconWithLabelProps) {
 
     return (
         <>
-            <div className={`flex flex-col gap-1 items-center cursor-pointer text-[#757575] hover:text-white p-2 ${selected ? selectedClassName : ""}`}>
+            <div className={`w-30 flex flex-col gap-1 items-center cursor-pointer text-[#757575] hover:text-white p-2 ${selected ? selectedClassName : ""}`}>
                 <div className="flex justify-center">
                     {children}
                 </div>
