@@ -1,26 +1,15 @@
-import Home from './pages/home'
-import Layout from './Layouts/Layout'
-import AboutMe from './pages/aboutMe'
-import Contact from './pages/contact'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Landing from './landing';
 
 function App() {
-
   return (
-    <Layout>
-      <ComponentsFactory />
-    </Layout>
-  )
-}
-
-
-function ComponentsFactory({ isMobile = false }: { isMobile?: boolean }) {
-  return (
-    <>
-      <Home isMobile={isMobile} />
-      <AboutMe isMobile={isMobile} />
-      <Contact isMobile={isMobile} />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/*" element={<Landing />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
+
 
 export default App
